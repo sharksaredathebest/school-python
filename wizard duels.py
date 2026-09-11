@@ -45,4 +45,7 @@ player2 = Player(player2_name, player2_element)
 player2_health = player2.get_health()
 
 while player1_health > 0 and player2_health > 0:
-    print(player1_name, " pick an attack")
+    print(player1_name, " tis your turn")
+    if player1_element == "water":
+        print("1. Water attack")
+        attack1 = int(input("Enter an option: "))

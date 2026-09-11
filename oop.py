@@ -119,9 +119,10 @@ for i in range(a):
 for b in range(len(cars)):
     print(cars[b].GetVehicleID())
 
-for i in cars:
-    if i.GetPurchasePrice() < cheapest:
-        cheapest = i.GetPurchasePrice()
-        cheap = i.GetVehicleID()
-print("Cheapest price: ", cheapest)
-print("Cheapest Vehicle: ", cheap)
+biggest = cars[0]
+
+for f in cars:
+    if f.GetEngineSize() < biggest.GetEngineSize():
+        biggest = cars[f]
+print("Biggest car's vehicle ID: ", biggest.GetVehicleID())
+print("Biggest car's engine size: ", biggest.GetEngineSize())
